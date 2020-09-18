@@ -1,0 +1,11 @@
+x=1;
+if x < 5 then
+    while x == 1 do
+        x = x + 4;
+        wr x;
+        while x > 1 do
+        if x == 5 then
+            x = 7
+        else
+            x = 10;
+wr x

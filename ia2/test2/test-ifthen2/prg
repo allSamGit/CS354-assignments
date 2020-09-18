@@ -1,0 +1,12 @@
+if 1<2 then
+    x=1
+else
+    x=2;
+wr x;
+if 1>2 then
+    x=3
+else
+    x=4;
+wr x;
+if 1<2 then wr 100;
+if 1>2 then wr 200

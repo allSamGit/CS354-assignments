@@ -1,0 +1,6 @@
+rd x;
+rd y;
+while x < y do
+y = x + 1;
+wr x;
+wr y

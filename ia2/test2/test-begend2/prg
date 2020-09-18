@@ -1,0 +1,4 @@
+x=3;
+if x < 5 then
+begin x=0; x=5 end; 
+wr x

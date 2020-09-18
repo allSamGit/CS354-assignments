@@ -1,0 +1,38 @@
+#!/bin/awk -f
+
+/CS354 la4/
+/Date: 11.14.18/
+/Saman Rastgar/
+
+BEGIN {
+	IGNORECASE = 1
+	FPAT = "([^,]*)|(\"[^\"]+\")"
+		
+        printf("<html>\n<head><title>Single Family Dwelling</title></head>\n<body>\n<h1>Single Family Dwelling information</h1>\n");
+        printf("<table>\n");
+}
+
+/Table header/
+NR == 1 {
+  print("<tr>")
+  for (i = 1; i <= NF; i++) {
+    if(i == 1 || i == 5 || i == 6 || i == 7 || i == 8 )
+      printf("<th>%s</th>", $i)
+  }
+  print("</tr>")
+}
+
+ /Single Family Dwelling/{
+  printf("<tr>\n");
+  for (i = 1; i <= NF; i++) {
+    if(i == 1 || i == 5 || i == 6 || i == 7 || i == 8 )
+      printf("<td>%s</td>", $i)
+  }
+  printf("</tr>\n");
+}
+
+END {
+	printf("</table>\n");
+	printf("</body></html>\n");
+}
+
